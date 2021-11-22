@@ -6,4 +6,8 @@ class Stack {
   push(item) {
     this.items.push(item);
   }
+
+  pop() {
+    this.items.pop();
+  }
 }
