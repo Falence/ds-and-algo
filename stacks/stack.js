@@ -14,7 +14,7 @@ class Stack {
   }
 
   isEmpty() {
-    return this.count === 0;
+    return this.size() === 0;
   }
 
   pop() {
