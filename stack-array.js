@@ -27,3 +27,8 @@ class Stack {
     this.items = [];
   }
 }
+
+
+const stack = new Stack();
+// consume the methods of the object
+// ...
