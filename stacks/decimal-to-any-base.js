@@ -8,7 +8,7 @@ function baseConverter({ decimalNumber, base }) {
   let remainder;
   let baseString = '';
 
-  if (!(base >= 2 && base <=36)) {
+  if (!(base >= 2 && base <= 36)) {
     return '';
   }
 

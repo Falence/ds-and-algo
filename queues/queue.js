@@ -15,7 +15,7 @@ class Queue {
       return undefined;
     }
     const result = this.items[this.lowestCount];
-    delete this.items[this.lowestCount];
+    delete this.items[this.lowestCount];  
     this.lowestCount++;
     return result;
   }
