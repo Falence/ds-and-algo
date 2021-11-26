@@ -17,11 +17,16 @@ class Deque {
       this.lowestCount--;
       this.items[this.lowestCount] = element;
     } else {
-      for (let i = this.count; i > 0; i--) {
-        this.items[i] = this.items[i-1];
-      }
-      this.count++;
-      this.lowestCount = 0;
+      // for educational purposes
+      // for (let i = this.count; i > 0; i--) {
+      //   this.items[i] = this.items[i-1];
+      // }
+      // this.count++;
+      // this.lowestCount = 0;
+      // this.items[this.lowestCount] = element;
+
+      // OR
+      this.lowestCount--;
       this.items[this.lowestCount] = element;
     }
   }
@@ -79,6 +84,8 @@ class Deque {
     return qlist;
   }
 }
+
+module.exports = Deque;
 
 const list = new Deque();
 // use
