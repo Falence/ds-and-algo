@@ -24,5 +24,7 @@ function hotPotato({ elementsList, number }) {
   }
 }
 
-const names = ['W','X', 'Y', 'Z'];
-console.log(hotPotato({ elementsList: names, number: 2 }));
+const names = ['John','Jack', 'Camilla', 'Ingrid', 'Carl'];
+const result = hotPotato({ elementsList: names, number: 7 });
+result.eliminated.forEach(name => console.log(`${name} was eliminated!`));
+console.log(`The winner is: ${result.winner}!`);
