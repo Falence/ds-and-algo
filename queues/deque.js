@@ -18,16 +18,16 @@ class Deque {
       this.items[this.lowestCount] = element;
     } else {
       // for educational purposes
-      // for (let i = this.count; i > 0; i--) {
-      //   this.items[i] = this.items[i-1];
-      // }
-      // this.count++;
-      // this.lowestCount = 0;
-      // this.items[this.lowestCount] = element;
+      for (let i = this.count; i > 0; i--) {
+        this.items[i] = this.items[i-1];
+      }
+      this.count++;
+      this.lowestCount = 0;
+      this.items[this.lowestCount] = element;
 
       // OR
-      this.lowestCount--;
-      this.items[this.lowestCount] = element;
+      // this.lowestCount--;
+      // this.items[this.lowestCount] = element;
     }
   }
 
@@ -60,10 +60,12 @@ class Deque {
   }
 
   peekFront() {
+    if (this.isEmpty()) return undefined;
     return this.items[this.lowestCount];
   }
 
   peekBack() {
+    if (this.isEmpty()) return undefined;
     return this.items[this.count - 1];
   }
 
